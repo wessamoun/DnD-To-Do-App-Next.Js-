@@ -42,7 +42,7 @@ export const SortableItem: React.FC<Props> = ({ item, items, setItems }) => {
             deleteTask();
             
           }}
-          className="w-5 h-5 z-50 cursor-pointer rounded-full hover:bg-red-600 flex justify-center items-center hover:text-white transition-all"
+          className={`${item.title === "No Tasks" ? "hidden" : "flex"} w-5 h-5 cursor-pointer rounded-full hover:bg-red-600 justify-center items-center hover:text-white transition-all`}
         >
           X
         </div>
